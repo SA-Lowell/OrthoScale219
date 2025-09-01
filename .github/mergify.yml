@@ -1,0 +1,24 @@
+pull_request_rules:
+  - name: Auto-merge approved PRs with passing checks
+    conditions:
+      - "#approved-reviews-by>=1"
+      - check-success=all
+      - label!=do-not-merge
+    actions:
+      merge:
+        method: merge
+      comment:
+        message: Thanks for the contribution! Merged automatically.
+  - name: Close inactive PRs
+    conditions:
+      - "#approved-reviews-by=0"
+      - updated-at>90 days
+    actions:
+      close:
+        message: This PR is automatically being closed due to inactivity. Reopen if needed.
+  - name: Label small PRs
+    conditions:
+      - "#files<=5"
+    actions:
+      label:
+        add: [small-pr]

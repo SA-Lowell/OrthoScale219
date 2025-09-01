@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Documentation
+    url: https://github.com/SA-Lowell/OrthoScale219/blob/master/docs/README.md
+    about: Check docs for usage and troubleshooting before reporting
+  - name: Code of Conduct
+    url: https://github.com/SA-Lowell/OrthoScale219/blob/master/.github/CODE_OF_CONDUCT.md
+    about: Read our community guidelines
+  - name: Security Policy
+    url: https://github.com/SA-Lowell/OrthoScale219/blob/master/.github/SECURITY.md
+    about: Report security vulnerabilities privately

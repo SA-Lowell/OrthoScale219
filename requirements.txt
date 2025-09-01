@@ -1,0 +1,7 @@
+# requirements.txt for OrthoScale219
+# Runtime dependencies (none required, as it uses Blender's built-in Python API)
+# In case the above ever changes (it won't): Install with: pip install -r requirements.txt
+
+# Dev dependencies (optional, for type checking and linting)
+# mypy==1.11.1  # For strict typing with stubs/
+# pylint==3.2.6  # For code linting, as mentioned in troubleshooting

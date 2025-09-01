@@ -1,0 +1,16 @@
+schema_version = "1.0.0"
+id = "ortho_scale_219"
+version = "2.1.9+109092.1756709219"
+name = "OrthoScale219"
+tagline = "Sets a camera to orthographically render at a set Blender Unit to pixel scale bound around target objects"
+description = """OrthoScale219 automates the setup of an orthographic camera for precise rendering at a user-defined pixel-to-Blender-Unit ratio. It calculates the bounding box around selected mesh objects, centers the camera view, applies edge margins for padding, adjusts resolution and orthographic scale, and optimizes clip planes to ensure clean renders without clipping issues. Ideal for technical illustrations, 2D asset creation, or consistent scale exports. The add-on features a dedicated panel in the Render properties for managing multiple configurations, selecting cameras and objects, and compiling setups with undo support and detailed reporting."""
+maintainer = "S.A. Lowell"
+type = "add-on"
+blender_version_min = "4.5.0"
+license = ["PolyForm-Noncommercial-1.0.0"]
+category = "Render"
+website = "https://salowell.com/dev/Blender/OrthoScale219/"
+permissions = []
+#platforms = []
+#wheels = []
+copyright = ["© 2025 S.A. Lowell"]

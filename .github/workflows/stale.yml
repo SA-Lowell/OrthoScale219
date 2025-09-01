@@ -1,0 +1,24 @@
+name: Mark stale issues and PRs
+on:
+  schedule:
+    - cron: '0 0 * * *'
+jobs:
+  stale:
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+      pull-requests: write
+    steps:
+      - uses: actions/stale@v9
+        with:
+          days-before-stale: 90
+          days-before-close: 90
+          days-before-pr-stale: 90
+          days-before-pr-close: 90
+          exempt-issue-labels: 'pinned,security'
+          stale-issue-label: 'stale'
+          stale-issue-message: >
+            This issue/PR has been automatically marked as stale due to inactivity.
+            If it's still relevant, add a comment to keep it open. Otherwise, it will be closed in 90 days.
+          close-issue-message: >
+            This issue/PR has been automatically closed due to lack of activity. If needed, open a new one.

@@ -1,0 +1,21 @@
+name: Deploy Blender Add-on
+on:
+  release:
+    types: [published]
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Build Zip
+        run: zip -r ortho_scale_219.zip __init__.py blender_manifest.toml LICENSE.md README.md
+      - name: Upload to Release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: ortho_scale_219.zip
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

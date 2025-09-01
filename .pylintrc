@@ -1,0 +1,5 @@
+[MESSAGES CONTROL]
+disable=line-too-long,trailing-whitespace,invalid-name,import-error,too-few-public-methods,too-many-arguments,too-many-positional-arguments,too-many-locals,too-many-statements
+
+[TYPECHECK]
+generated-members=bpy.ops.ortho_scale_219.*,bpy.ops.render.ortho_scale_219_compile

@@ -1,0 +1,12 @@
+code:
+  - changed-files:
+      - any-glob-to-any-file: ["*.py","*.toml"]
+documentation:
+  - changed-files:
+      - any-glob-to-any-file: ["docs/*","*.md"]
+dev:
+  - changed-files:
+      - any-glob-to-any-file: "dev/stubs/*"
+images:
+  - changed-files:
+      - any-glob-to-any-file: "docs/images/*"

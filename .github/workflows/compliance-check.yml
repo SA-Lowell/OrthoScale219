@@ -1,0 +1,24 @@
+name: Compliance Check
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+jobs:
+  compliance:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install License Compliance Tool
+        run: pip install pip-licenses
+      - name: Run License Compliance Scan
+        run: pip-licenses --with-authors --format=markdown > compliance-report.txt
+      - name: Upload Report (optional)
+        uses: actions/upload-artifact@v4
+        with:
+          name: compliance-report
+          path: compliance-report.txt
